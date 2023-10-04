@@ -1,0 +1,301 @@
+body{ 
+	background-color: #fffff2;
+	text-align: left;
+	padding-left:16%;
+	padding-right:16%;
+	font-size: 22px;
+	font-family:  "Times New Roman", serif;
+	/*para que no sea tan abrupto el cambio a oscuro*/
+	transition: background-color 0.6s ease, color 0.2s ease;
+}
+
+h1{
+	font-size: 65px;
+	text-align: center;
+	text-shadow: 0px 0px 10px #6073bf;
+}
+
+h2 , #puntuacion{
+	font-family: "Comic Sans MS","Comic Sans",serif;
+}
+
+input ,select, label {
+	cursor: pointer;
+}
+
+input[type=text]{
+	border: none;
+	border-bottom: 2px solid black;
+	font-size: 22px;
+	color: grey;
+}
+
+input[type=text]:focus{
+	background-color: lightblue;
+}
+
+input[type=button] {
+	background-color: #6073bf; 
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	font-size: 30px;
+	margin: 20px 10px 10px 0px;
+	transition-duration: 0.2s;
+	border-radius: 5%
+}
+
+input[type=button]:hover{
+	background-color: white;
+	color:  #6073bf;
+	border: 2px solid #e8e8e8;
+}
+
+#butFin , #butPun{
+	background-color: #037e37;
+	color:  #332d2d;
+	border: 2px solid #70f01f;
+}
+
+#butFin:hover ,#butPun:hover{
+	background-color: #332d2d;
+	color:  #037e37 ;
+	border: 2px solid #70f01f;
+}
+
+#butPun{
+	display: none;
+
+}
+
+#nomError {
+	color: red;
+	font-style: italic ;
+	font-size: 110%;
+}
+
+#sobreUs{
+	font-weight: bold;
+}
+
+img{
+	width: 100%;
+	max-height: 650px;
+	margin-bottom: 10px;
+}
+
+.pregunta{
+	margin-bottom: 50px;
+}
+
+.pregunta p{
+	font-weight: bolder;
+}
+
+div#cuestionario , footer {
+	font-size: 120%;
+	display:none;
+}
+
+.pagina{
+	display:none;
+}
+
+div#facs{
+	text-shadow: 0 0 3px gold, 0 0 5px black;
+	font-weight: bold;
+}
+
+/* Estilos de radios */ 
+
+#rHeroes:checked + label ,#rHeroes + label:hover {
+  text-shadow: 0px 0px 3px #00CC00;
+}
+
+#rVillanos:checked + label , #rVillanos + label:hover {
+  text-shadow: 0px 0px 3px #DD0000;
+}
+
+
+.opciones .CG:checked +label ,.opciones .CG +label:hover {
+	text-shadow: 0px 0px 3px #FDE311;
+	color: #292929;
+	font-weight: bolder;
+}
+
+.opciones .manhattan:checked +label ,.opciones .manhattan +label:hover{
+	text-shadow: 0px 0px 3px #00ddff;
+	font-weight: bolder;
+}
+
+.opciones .MujerMaravilla:checked +label ,.opciones .MujerMaravilla +label:hover{
+	color:#ad9231;
+	text-shadow: 0px 0px 6px #DE0405 , 0px 0px 1px black;
+	font-weight: bolder;
+}
+
+
+.opciones .Harley:checked +label ,.opciones .Harley +label:hover{
+	color: #1374f2;
+	text-shadow:  0px 0px 6px #FF0000;
+	font-weight: bolder;
+}
+
+/*Estilos select */ 
+
+select{
+	margin-top: 10px;
+	font-size: 30px;
+	align-self: center;
+	width: 100%;
+}
+
+select.pregS{
+	background-color:#FFEB00;
+	border: 3px solid blue;
+	color:#C80000;
+}
+
+
+#pregCyborg select{
+	background-color:#1c1b1b;
+	border: 3px solid #C90000;
+	color:#C90000;
+}
+
+#pregMrFreeze select{
+	background-color:	#eeeeee;
+	border: 3px solid #81a4d4;
+	color:	#0d56ba;
+}
+
+/*Estilo CheckBox*/
+/* white space para que al cambiar el tamaño de la ventana se desplace el checkbox con su respectiva label 
+y no quede un cuadrado arriba y el label debajo  */
+.opciones label {
+	white-space: nowrap;
+}
+
+input[type="checkbox"]:checked{
+  box-shadow: 0 0 0 3px black;
+}
+
+/* Modo oscuro*/
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+/* slider*/
+.switch {
+  position: relative;
+  float: right;
+  display: inline-block;
+  width: 90px;
+  height: 34px;
+}
+
+/*escondo el cuadradito del tilde del checkbox*/
+.switch input {display:none;}
+
+/* forma redonda */
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 100%;}
+
+
+/*El circulito*/ 
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/* Despues de "tildarlo"*/
+input:checked + .slider {
+  background-color: white;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+/* el traslateX para mover el circulito horizontalmente*/
+input:checked + .slider:before {
+  -webkit-transform: translateX(55px);
+  -ms-transform: translateX(55px);
+  transform: translateX(55px);
+  background-color: black;
+}
+
+/*Para el mensaje dentro del switch*/
+#darkOn{
+  display: none;
+  color: black ;
+}
+
+#darkOn, #darkOff{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 51%;
+  font-size: 14px;
+}
+#darkOff{
+	color: white ;
+}
+
+input:checked+ .slider #darkOn{
+	display: block;
+}
+
+input:checked + .slider #darkOff{
+	display: none;
+}
+
+
+/*Respuestas con imagenes*/
+
+/*escondo los circulitos de los radios*/
+input.Oscars ,input.dosCaras {
+	display: none;
+}
+
+/*para darle estilo a las imagenes */
+.opciones label img{
+	width: 20%;
+	margin: 10px 2.1% 0 ;
+	max-height: 160px;
+}
+
+.opciones label img:hover {
+	box-shadow:0 0 7px 5px silver;
+} 
+
+.opciones .Oscars:checked +label img {
+	box-shadow: 0 0 7px 5px gold;
+}
+
+.opciones .dosCaras:checked +label img {
+	box-shadow: 0px 0px 7px 5px #4b15b0 ;
+}
+
+

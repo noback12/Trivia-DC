@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head >
+		<meta charset="utf-8">
+		<title>Cuestionario DC </title>
+		<link rel="icon" type="image/png" href="imagenes/DC.ico" />
+		<link rel="stylesheet" type="text/css" href="tp.css">
+		<script  src="js/jquery-3.6.0.min.js"  ></script>
+	</head>
+	<body>
+		<h1>DC Super Trivia </h1>
+		<label class="switch">
+ 				<input type="checkbox" id="togBtn">
+ 				<span class="slider round">
+	  				<span id="darkOn">Luz</span>
+	  				<span id="darkOff">Dark</span>
+ 				</span>
+		</label>
+		
+		<div id="sobreUs">
+			<label>Nombre del participante : <input type="text" id="boxUs" name="us" placeholder="EJ:Edward Nygma"  /></label> 
+			<!--si no ingresan nombre-->
+			<div id="nomError"></div>
+			<input type="button" value="Comenzar" id="butIn"/>
+		</div>
+
+		<div id="cuestionario">		
+			<section class ="pagina">
+				<h2>Pagina 1</h2>
+				<div class="pregunta"><p>¿Cual es el nombre del Comisionado del Departamento de Policía de Ciudad Gotica?</p> 
+					<img src="imagenes/ComisionadoGotham2.jpg"
+				     alt="De oficial a Comisionado del departamento de Policia de ciudad Gotica"
+				     title="Protagonista de la serie Gotham">
+					
+					<div class = "opciones">
+						<div>
+							<input type="radio"  name="preg1" id="preg1JG" class="CG" value="James 'Jim' Gordon"/>
+							<label for="preg1JG">James 'Jim' Gordon </label>
+						</div>	
+						<div>
+							<input type="radio" name="preg1" id="preg1BA" class="CG" value="Barry Allen"/>
+							<label for="preg1BA">Barry Allen </label>
+						</div>
+						<div>
+							<input type="radio" name="preg1" id="preg1OC" class="CG" value="Oswald Cobblepot"/>
+							<label for="preg1OC">Oswald Cobblepot </label>	
+						</div>
+						<div>
+							<input type="radio" name="preg1" id="preg1AM" class="CG" value="Alex J. Murphy"/>
+							<label for="preg1AM">Alex J. Murphy</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="pregunta"><p>¿En que ciudad vive Superman?</p> 
+					<img src="imagenes/CiudadSuperman2.jpg"
+					alt="La hermosa Ciudad de batman "
+				    title="Criado en una granja,luego se muda a la ciudad">
+
+					<div class="opciones">
+						<select  class="pregS" id="SuperCiudad">
+							<option value="Manchester City">Manchester City</option>
+							<option value="Central City">Central City</option>
+							<option value="Castle Rock">Castle Rock</option>
+							<option value="King's Landing">King's Landing</option>
+							<option value="Metrópolis" >Metrópolis</option>
+							<option value="Narnia ">Narnia</option>
+							<option value="West Newberry">West Newberry</option>
+							<option value="Mónaco">Mónaco</option>
+							<option value="Ciudad Jardin">Ciudad Jardin</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="pregunta"><p>¿Quien es 'The Flash'?</p> 
+					<img src="imagenes/TheFlash2.jpg"
+					alt="run .... run  "
+				    title="My nombre es ... y soy el hombre mas rapido">
+					<div class="opciones">
+						<label ><input type="checkbox"  class="cbFlash" value="Barry Allen"> Barry Allen</label>
+
+						<label><input type="checkbox"  class="cbFlash" value="Pietro Maximoff"> Pietro Maximoff</label>
+
+						<label><input type="checkbox"  class="cbFlash" value="Eobard Thawne"> Eobard Thawne</label>
+
+						<label><input type="checkbox"  class="cbFlash" value="Jay Garrick"> Jay Garrick</label>
+
+						<label><input type="checkbox"  class="cbFlash" value="Usain Bolt"> Usain Bolt</label>
+
+						<label><input type="checkbox"  class="cbFlash" value="Dashiell Robert"> Dashiell Robert</label>
+					</div>
+				</div>
+			</section>
+
+			
+			<section class="pagina">
+				<h2>Pagina 2</h2>
+				<div class="pregunta"><p>¿Como obtuvo el Dr manhattan sus poderes?</p>
+					<img src="imagenes/Watchmen2.jpg"
+				     alt="Foto del grupo conocido como watchmen"
+				     title="La creacion mas peligrosa de la humanidad">
+					<div class = "opciones">
+						<div>
+							<input type="radio" name="pregDM" id="pregDM1" class="manhattan" value="Deseos"/>
+							<label for="pregDM1">Encontro la fuente de los deseos </label>
+						</div>
+						<div>
+							<input type="radio" name="pregDM" id="pregDM2" class="manhattan" value="genio"/>
+							<label for="pregDM2">Se lo otorgo un genio de una lampara</label>
+						</div>
+						<div>
+							<input type="radio" name="pregDM" id="pregDM3" class="manhattan" value="accidente"/>
+							<label for="pregDM3">Accidente durante un experimento de física nuclear </label>	
+						</div>
+						<div>
+							<input type="radio" name="pregDM" id="pregDM4" class="manhattan" value="entrenando"/>
+							<label for="pregDM4">Entrenando artes marciales</label>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="pregunta"><p>¿Que significa la 'S' en el pecho de superman? </p>
+
+					<img src="imagenes/SupermanLogo2.jpg"
+					alt="Logo de superman"
+				    title="Un simbolo para todos">
+
+				    <div class="opciones">
+						<select class="pregS" id="superLogo" >
+							<option value="Supervivencia">Supervivencia</option>
+							<option value="Justicia">Justicia</option>
+							<option value="Seguridad">Seguridad</option>
+							<option value="Servicio">Servicio</option>
+							<option value="Sentido Comun">Sentido Comun</option>
+							<option value="Super">Super</option>
+							<option value="Sinceridad">Sinceridad</option>
+							<option value="Heroísmo">Heroísmo</option>
+							<option value="Esperanza">Esperanza</option>
+							<option value="Soldado">Soldado</option>
+						</select>
+					</div>
+				</div>		
+
+				<div class="pregunta"><p>¿Que personajes pertenecen al grupo 'Titanes/jovenes titanes'? </p>
+
+					<img src="imagenes/Titans.jpg"
+					alt="Titanes netflix original"
+				    title="Un nuevo equipo de superheroes">
+
+					<div class="opciones">
+						<label><input type="checkbox"  class="pJT" value="Starfire"> Starfire</label>
+
+						<label><input type="checkbox"  class="pJT" value="Dredd"> Dredd</label>
+
+						<label><input type="checkbox"  class="pJT" value="Chico Bestia"> Chico Bestia</label>
+
+						<label><input type="checkbox"  class="pJT" value="Martian Manhunter"> Martian Manhunter</label>
+
+						<label><input type="checkbox"  class="pJT" value="Raven"> Raven</label>
+
+						<label><input type="checkbox"  class="pJT" value="Gambito"> Gambito </label>
+
+						<label><input type="checkbox"  class="pJT" value="Ghost Rider">Ghost Rider </label>
+
+						<label><input type="checkbox"  class="pJT" value="Hellboy">Hellboy</label>
+					</div>
+				</div>		
+			</section>
+
+			<section class="pagina">
+				<h2>Pagina 3</h2>
+				<div class="pregunta"><p>¿De que pueblo proviene la Mujer Maravilla?</p>
+					<img src="imagenes/islaWW.jpg"
+					alt="Themyscira "
+				    title="Tribu de todas mujeres guerreras">
+					<div class = "opciones">
+						<div>
+						<input type="radio" name="pregMM" id="pregMM1" class="MujerMaravilla" value="Arpias"/>
+						<label for="pregMM1">Las Arpias </label>	
+						</div>
+						<div>
+						<input type="radio" name="pregMM" id="pregMM2" class="MujerMaravilla" value="AvesPresa"/>
+						<label for="pregMM2">Las aves de presa</label>
+						</div>
+						<div>
+						<input type="radio" name="pregMM" id="pregMM3" class="MujerMaravilla" value="Amazonas"/>
+						<label for="pregMM3">Las Amazonas </label>	
+						</div>
+						<div>
+						<input type="radio" name="pregMM" id="pregMM4" class="MujerMaravilla" value="FFApololips"/>
+						<label for="pregMM4">Las Furias Femeninas de Apokolips</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="pregunta" id="pregCyborg"><p>¿Quien construyo a Cyborg? </p>
+					<img src="imagenes/Cyborg.jpg"
+					alt="Victor Stone"
+				    title="Era la unica forma de salvar a Victor">
+
+				    <div class="opciones" >
+						<select id="victorStone" >
+							<option value="La hermandad del Acero">La hermandad del Acero</option>
+							<option value="El FBI">El FBI</option>
+							<option value="La USSR">La USSR</option>
+							<option value="El Ejercito">Servicio</option>
+							<option value="Su Padre">Su Padre</option>
+							<option value="Batman">Batman</option>
+							<option value="La Nasa">La Nasa</option>
+							<option value="El mismo">El mismo</option>
+							<option value="Cybertron">Cybertron</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="pregunta"><p>¿Quienes forman parte del grupo conocido como "Escuadron Suicida" ? </p>
+
+					<img src="imagenes/SuicideSquad2.jpg"
+					alt="Sucide Squad Logo "
+				    title="Villanos encarcelados que realizan misiones secretas a cambio de penas de prisión reducidas">
+
+					<div class="opciones">
+						<label><input type="checkbox"  class="cbES" value="El Diablo"> El Diablo</label>
+
+						<label><input type="checkbox"  class="cbES" value="Ultron">Ultron</label>
+
+						<label><input type="checkbox"  class="cbES" value="Sergio Ramos">Sergio Ramos</label>
+
+						<label><input type="checkbox"  class="cbES" value="Michael Myers">Michael Myers</label>
+
+						<label><input type="checkbox"  class="cbES" value="T-1000">T-1000</label>
+
+						<label><input type="checkbox"  class="cbES" value="Harley Quinn"> Harley Quinn </label>
+
+						<label><input type="checkbox"  class="cbES" value="Dexter Morgan">Dexter Morgan</label>
+
+						<label><input type="checkbox"  class="cbES" value="Deadshot">Deadshot</label>
+					</div>
+				</div>				
+			</section>
+
+
+			<section class="pagina">
+				<h2>Pagina 4</h2>
+				<div class="pregunta"><p>¿De que trabajaba Harleen Quinzel?</p>
+					<img src="imagenes/HarleyQuinn.jpg"
+					alt="Harley Quinn "
+				    title="Debe ser estresante trabajar en Arkham">
+					<div class = "opciones">
+						<div>
+						<input type="radio" name="pregHQ" id="pregHQ1" class="Harley" value="Abogada"/>
+						<label for="pregHQ1">Abogada</label>	
+						</div>
+						<div>
+						<input type="radio" name="pregHQ" id="pregHQ2" class="Harley" value="Agente Secreta"/>
+						<label for="pregHQ2">Agente Secreta</label>
+						</div>
+						<div>
+						<input type="radio" name="pregHQ" id="pregHQ3" class="Harley" value="En un local de comida rapida"/>
+						<label for="pregHQ3">En un local de comida rapida</label>	
+						</div>
+						<div>
+						<input type="radio" name="pregHQ" id="pregHQ4" class="Harley" value="Psiquiatra"/>
+						<label for="pregHQ4">Psiquiatra</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="pregunta" id="pregMrFreeze"><p>¿Cual es el objetivo del Dr. Frio Victor Fries? </p>
+					<img src="imagenes/DrFrio.jpg"
+					alt="Mr. Freeze Victor Fries"
+				    title="Congelado por fuera ,roto por dentro">
+
+				    <div class="opciones" >
+						<select id="victorFries" >
+							<option value="Terminar con el verano">Terminar con el verano</option>
+							<option value="Viajar en el SnowPiercer">Viajar en el SnowPiercer</option>
+							<option value="Volver a Rusia">Volver a Rusia</option>
+							<option value="Vengar a su hermano asesinado">Vengar a su hermano asesinado</option>
+							<option value="Liderar a los Caminantes Blancos">Liderar a los Caminantes Blancos</option>
+							<option value="Hacerse rico congelando todo">Hacerse rico congelando todo</option>
+							<option value="Salvar a su esposa">Salvar a su esposa</option>
+							<option value="Quedar solo en el mundo">Quedar solo en el mundo</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="pregunta"><p>¿Que villanos suelen aterrorizar ciudad Gotica? </p>
+
+					<img src="imagenes/villanos.jpg"
+					alt="Enemigos de batman "
+				    title="Una ciudad demasiado peligrosa ">
+
+					<div class="opciones">
+						<label><input type="checkbox" class="villanosG"  value="Bane">Bane</label>
+
+						<label><input type="checkbox" class="villanosG"  value="El Espantapájaros">El Espantapájaros</label>
+
+						<label><input type="checkbox" class="villanosG"  value="El Guason">El Guason</label>
+
+						<label><input type="checkbox" class="villanosG"  value="El pinguino">El pinguino</label>
+
+						<label><input type="checkbox" class="villanosG"  value="Dos Caras">Dos Caras</label>
+
+						<label><input type="checkbox" class="villanosG"  value="Hiedra Venenosa">Hiedra Venenosa</label>
+
+						<label><input type="checkbox" class="villanosG"  value="Death Stroke">Death Stroke</label>
+						
+						<label><input type="checkbox" class="villanosG"  value="El Acertijo">El Acertijo</label>
+						
+						<label><input type="checkbox" class="villanosG"  value="Ra's al Ghul">Ra's al Ghul</label>
+						
+						<label><input type="checkbox" class="villanosG"  value="Gatúbela ">Gatúbela </label>
+												
+
+					</div>
+				</div>				
+			</section>
+
+			<section class="pagina">
+				<h2>Pagina 5</h2>
+
+				<div class="pregunta"><p>Que personaje tiene 2 premios de la academia/"Oscars"?</p>
+					<img src="imagenes/oscars.jpg"
+					alt="Premios de la academia "
+				    title="Actuaciones memorables">
+					<div class = "opciones">
+						
+						<input type="radio" name="pregOscars" id="pregOscars1" class="Oscars" value="SuperMan"/>
+						<label for="pregOscars1"><img src="imagenes/oscarSupermans.jpg"	alt="Superman" title="Los mas iconicos"/></label>	
+						
+						
+						<input type="radio" name="pregOscars" id="pregOscars2" class="Oscars" value="Joker"/>
+						<label for="pregOscars2"><img src="imagenes/oscarJokers.png" alt="El guason" title="Los mas locos"/></label>	
+						
+						<input type="radio" name="pregOscars" id="pregOscars3" class="Oscars" value="flash"/>
+						<label for="pregOscars3"><img src="imagenes/oscarFlashes.jpg" alt="The Flash" title="Los mas veloces"/></label>	
+						
+						<input type="radio" name="pregOscars" id="pregOscars4" class="Oscars" value="mujerMaravilla"/>
+						<label for="pregOscars4"><img src="imagenes/oscarWWs.jpg" alt="Mujer Maravilla" title="Las mas heroicas"/></label>	
+						
+					</div>
+				</div>
+
+
+				<div class="pregunta"><p>Quien es conocido como Dos Caras?</p>
+					<img src="imagenes/coin.jpg"
+					alt="Moneda de dos caras"
+				    title="El mundo es cruel y la única moral en un mundo cruel es el azar: objetivo, imparcial… justo">
+					<div class = "opciones">
+						
+						<input type="radio" name="pregDosCaras" id="pregDosCaras1" class="dosCaras" value=""/>
+						<label for="pregDosCaras1"><img src="imagenes/dosCaras4.jpg"	alt="SHAZAM!" title="SHAZAM!"/></label>	
+						
+						<input type="radio" name="pregDosCaras" id="pregDosCaras2" class="dosCaras" value=""/>
+						<label for="pregDosCaras2"><img src="imagenes/dosCaras2.jpg"	alt="Slade Wilson" title="Cazarecompensas"/></label>	
+
+						<input type="radio" name="pregDosCaras" id="pregDosCaras3" class="dosCaras" value=""/>
+						<label for="pregDosCaras3"><img src="imagenes/dosCaras3.jpg"	alt="Rey Mysterio" title="619!"/></label>	
+
+						<input type="radio" name="pregDosCaras" id="pregDosCaras4" class="dosCaras" value=""/>
+						<label for="pregDosCaras4"><img src="imagenes/dosCaras.jpg"	alt="Harvey Dent" title="Gangster"/></label>	
+						
+					</div>
+				</div>
+
+			</section>
+
+			<section class="pagina">
+				<h2>Puntuacion</h2>
+				<img src="imagenes/Riddler.jpg"
+					alt="?????"
+				    title="??????">
+
+				<p id="puntuacion">Desea Finalizar ? aun puede revisar sus respuestas </p>
+			</section>
+
+			<input type="button" value="Anterior" id="butAnt" />
+			<input type="button" value="1" id="butUno" />
+			<input type="button" value="2" id="butDos" />
+			<input type="button" value="3" id="butTres" />
+			<input type="button" value="4" id="butCuatro" />
+			<input type="button" value="5" id="butCinco" />
+
+			<input type="button" value="Siguiente" id="butSig" />
+			<input type="button" value="Finalizar" id="butFin" />
+			<input type="button" value="Puntuacion" id="butPun" />
+			
+		</div>
+		<footer> 
+			<p>Martin Caputti Legajo 26039</p>		
+		</footer>
+
+		<script  src="js/tp.js" ></script>
+	</body>
+	
+</html>
+
+
